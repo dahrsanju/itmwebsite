@@ -97,31 +97,23 @@ function App() {
 
       {/* Hero Section */}
       <section id="home" className="hero">
-        <div className="hero-background">
-          <div className="hero-clouds">
-            <div className="cloud cloud-1"></div>
-            <div className="cloud cloud-2"></div>
-            <div className="cloud cloud-3"></div>
+        <div className="hero-content">
+          <div className="hero-left">
+            <div className="hero-badge">Digital Marketing Agency</div>
+            <h1 className="hero-title">
+              Get Your Brand Heard with <span className="highlight">ITECH MANTHRA</span>
+            </h1>
+            <p className="hero-subtitle">
+              Ranked #1 in Google Search<br />
+              Hyderabad's Top Digital Marketing Agency
+            </p>
+            <div className="hero-actions">
+              <a href="#contact" className="btn-primary btn-large">CONTACT US</a>
+              <a href="#about" className="btn-secondary-dark btn-large">Learn More</a>
+            </div>
           </div>
-        </div>
-        <div className="container">
-          <div className="hero-content">
-            <div className="hero-left">
-              <h1 className="hero-title">
-                Get Your Brand Heard with <span className="highlight">ITECH MANTHRA</span>
-              </h1>
-              <p className="hero-subtitle">
-                Ranked #1 in Google Search<br />
-                Hyderabad's Top Digital Marketing Agency
-              </p>
-              <div className="hero-actions">
-                <a href="#contact" className="btn-primary btn-large">CONTACT US</a>
-                <a href="#about" className="btn-secondary btn-large">Learn More</a>
-              </div>
-            </div>
-            <div className="hero-right">
-              {/* Empty right side for now */}
-            </div>
+          <div className="hero-right">
+            <img src="/heroimg11.png" alt="Digital Marketing - AI Powered Innovation" className="hero-image" />
           </div>
         </div>
       </section>
@@ -181,50 +173,32 @@ function App() {
           
           <div className="services-layout">
             <div className="services-grid-2x2">
-              <div className="service-card">
-                <div className="service-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                    <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
-                    <line x1="12" y1="22.08" x2="12" y2="12"/>
-                  </svg>
+              <div className="service-card service-card-seo">
+                <div className="service-card-content">
+                  <h3>Search Engine Optimization (SEO)</h3>
+                  <p>We're not just a SEO provider; we're a partner that you can rely on. We offer a comprehensive suite of SEO services, from keyword research to link building to content creation.</p>
                 </div>
-                <h3>Search Engine Optimization (SEO)</h3>
-                <p>We're not just a SEO provider; we're a partner that you can rely on. We offer a comprehensive suite of SEO services, from keyword research to link building to content creation.</p>
               </div>
 
-              <div className="service-card">
-                <div className="service-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                    <line x1="8" y1="21" x2="16" y2="21"/>
-                    <line x1="12" y1="17" x2="12" y2="21"/>
-                  </svg>
+              <div className="service-card service-card-ppc">
+                <div className="service-card-content">
+                  <h3>Google & Youtube Ads (PPC)</h3>
+                  <p>We offer a comprehensive suite of services that helps businesses reach their marketing goals. Our team of experts are certified in both Google Ads and YouTube Ads.</p>
                 </div>
-                <h3>Google & Youtube Ads (PPC)</h3>
-                <p>We offer a comprehensive suite of services that helps businesses reach their marketing goals. Our team of experts are certified in both Google Ads and YouTube Ads.</p>
               </div>
 
-              <div className="service-card">
-                <div className="service-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                  </svg>
+              <div className="service-card service-card-smm">
+                <div className="service-card-content">
+                  <h3>Social Media Marketing (SMM)</h3>
+                  <p>We're here to help you grow your business and reach your goals. We offer a wide range of social media marketing services, from strategy and planning to content creation.</p>
                 </div>
-                <h3>Social Media Marketing (SMM)</h3>
-                <p>We're here to help you grow your business and reach your goals. We offer a wide range of social media marketing services, from strategy and planning to content creation.</p>
               </div>
 
-              <div className="service-card">
-                <div className="service-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                    <line x1="8" y1="21" x2="16" y2="21"/>
-                    <line x1="12" y1="17" x2="12" y2="21"/>
-                  </svg>
+              <div className="service-card service-card-webdesign">
+                <div className="service-card-content">
+                  <h3>Website Designing & Auditing</h3>
+                  <p>Websites are a critical part of any business, and we understand that. We offer a wide range of services, including website design, auditing, and more.</p>
                 </div>
-                <h3>Website Designing & Auditing</h3>
-                <p>Websites are a critical part of any business, and we understand that. We offer a wide range of services, including website design, auditing, and more.</p>
               </div>
             </div>
 
@@ -339,23 +313,8 @@ function App() {
         <div className="container">
           <div className="digital-partner-content">
             <div className="digital-partner-left">
-              <div className="ai-image-container">
-                <div className="ai-image">
-                  <div className="ai-elements">
-                    <div className="ai-circle ai-circle-1"></div>
-                    <div className="ai-circle ai-circle-2"></div>
-                    <div className="ai-circle ai-circle-3"></div>
-                    <div className="ai-line ai-line-1"></div>
-                    <div className="ai-line ai-line-2"></div>
-                    <div className="ai-line ai-line-3"></div>
-                    <div className="ai-dot ai-dot-1"></div>
-                    <div className="ai-dot ai-dot-2"></div>
-                    <div className="ai-dot ai-dot-3"></div>
-                    <div className="ai-dot ai-dot-4"></div>
-                    <div className="ai-dot ai-dot-5"></div>
-                    <div className="ai-dot ai-dot-6"></div>
-                  </div>
-                </div>
+              <div className="partner-image-card">
+                <img src="/business.jpg" alt="Business Deals Partnership" className="partner-image" />
               </div>
             </div>
             <div className="digital-partner-right">
