@@ -1,3 +1,12 @@
+import projectWebtechmantra from '../assets/images/project-webtechmantra.jpg';
+import projectTechkalture from '../assets/images/project-techkalture.jpg';
+import projectDailytechquest from '../assets/images/project-dailytechquest.jpg';
+import projectWebpostmantra from '../assets/images/project-webpostmantra.jpg';
+import projectWebhealthmantra from '../assets/images/project-webhealthmantra.jpg';
+import projectTechcrazee from '../assets/images/project-techcrazee.jpg';
+import projectFlipupdates from '../assets/images/project-flipupdates.jpg';
+import projectDailytechhunt from '../assets/images/project-dailytechhunt.jpg';
+
 export const companyInfo = {
   name: 'iTech Manthra',
   tagline: 'A Place That Helps Growth of Your Business',
@@ -29,14 +38,14 @@ export const team = [
 ];
 
 export const portfolio = [
-  { name: 'WebTech Mantra', url: 'webtechmantra.com', category: 'SEO', description: 'A leading technology and web development blog delivering insights on the latest tech trends.' },
-  { name: 'Tech Kalture', url: 'techkalture.com', category: 'Content', description: 'Technology culture blog covering gadgets, apps, and digital innovation stories.' },
-  { name: 'Daily Tech Quest', url: 'dailytechquest.com', category: 'SEO', description: 'Daily technology news and reviews platform with strong organic search presence.' },
-  { name: 'Web Post Mantra', url: 'webpostmantra.com', category: 'Content', description: 'Content-driven platform focused on web development tips and digital marketing insights.' },
-  { name: 'Web Health Mantra', url: 'webhealthmantra.com', category: 'Web Design', description: 'Health and wellness website with modern design and comprehensive health information.' },
-  { name: 'Tech Crazee', url: 'techcrazee.com', category: 'SEO', description: 'Technology enthusiast blog with viral tech content and product reviews.' },
-  { name: 'Flipupdates', url: 'flipupdates.com', category: 'Web Design', description: 'E-commerce deals and updates platform with high-traffic design and user engagement.' },
-  { name: 'Daily Tech Hunt', url: 'dailytechhunt.com', category: 'Content', description: 'Curated tech discoveries and emerging technology stories published daily.' },
+  { name: 'WebTech Mantra', url: 'webtechmantra.com', category: 'SEO', description: 'A leading technology and web development blog delivering insights on the latest tech trends.', image: projectWebtechmantra },
+  { name: 'Tech Kalture', url: 'techkalture.com', category: 'Content', description: 'Technology culture blog covering gadgets, apps, and digital innovation stories.', image: projectTechkalture },
+  { name: 'Daily Tech Quest', url: 'dailytechquest.com', category: 'SEO', description: 'Daily technology news and reviews platform with strong organic search presence.', image: projectDailytechquest },
+  { name: 'Web Post Mantra', url: 'webpostmantra.com', category: 'Content', description: 'Content-driven platform focused on web development tips and digital marketing insights.', image: projectWebpostmantra },
+  { name: 'Web Health Mantra', url: 'webhealthmantra.com', category: 'Web Design', description: 'Health and wellness website with modern design and comprehensive health information.', image: projectWebhealthmantra },
+  { name: 'Tech Crazee', url: 'techcrazee.com', category: 'SEO', description: 'Technology enthusiast blog with viral tech content and product reviews.', image: projectTechcrazee },
+  { name: 'Flipupdates', url: 'flipupdates.com', category: 'Web Design', description: 'E-commerce deals and updates platform with high-traffic design and user engagement.', image: projectFlipupdates },
+  { name: 'Daily Tech Hunt', url: 'dailytechhunt.com', category: 'Content', description: 'Curated tech discoveries and emerging technology stories published daily.', image: projectDailytechhunt },
 ];
 
 export const testimonials = [

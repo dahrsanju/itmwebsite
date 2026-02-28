@@ -5,14 +5,6 @@ import 'aos/dist/aos.css';
 import SEOHead from '../components/ui/SEOHead';
 import SectionHeader from '../components/ui/SectionHeader';
 import { portfolio, companyInfo } from '../data/siteData';
-import portfolio1 from '../assets/images/portfolio-1.jpg';
-import portfolio2 from '../assets/images/portfolio-2.jpg';
-import portfolio3 from '../assets/images/portfolio-3.jpg';
-import portfolio4 from '../assets/images/portfolio-4.jpg';
-import portfolio5 from '../assets/images/portfolio-5.jpg';
-import portfolio6 from '../assets/images/portfolio-6.jpg';
-
-const portfolioImages = [portfolio1, portfolio2, portfolio3, portfolio4, portfolio5, portfolio6, portfolio1, portfolio2];
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -80,7 +72,7 @@ export default function Portfolio() {
               >
                 <div className="relative h-52 overflow-hidden">
                   <img
-                    src={portfolioImages[i % portfolioImages.length]}
+                    src={project.image}
                     alt={project.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"

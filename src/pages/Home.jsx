@@ -244,10 +244,13 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay={i * 80}
               >
-                <div className="relative h-48 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center overflow-hidden">
-                  <span className="text-5xl font-heading font-extrabold text-primary/20 group-hover:scale-110 transition-transform duration-500">
-                    {project.name.charAt(0)}
-                  </span>
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy"
+                  />
                   <div className="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-400">
                     <span className="text-white font-semibold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View Project</span>
                   </div>
