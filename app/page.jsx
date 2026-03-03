@@ -124,7 +124,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div data-aos="fade-right">
               <div className="relative">
-                <img src="/images/about-team.jpg" alt="iTech Manthra Team" className="rounded-2xl shadow-2xl w-full" loading="lazy" />
+                <img src="/images/cta-bg.jpg" alt="iTech Manthra Team" className="rounded-2xl shadow-2xl w-full" loading="lazy" />
                 <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-xl hidden md:block">
                   <div className="text-3xl font-heading font-extrabold">5+</div>
                   <div className="text-sm opacity-90">Years Experience</div>
@@ -262,7 +262,7 @@ export default function Home() {
               </Link>
             </div>
             <div data-aos="fade-left">
-              <img src="/images/training.jpg" alt="SEO Training in Hyderabad" className="rounded-2xl shadow-2xl w-full" loading="lazy" />
+              <img src="/images/testimonial-bg.jpg" alt="SEO Training in Hyderabad" className="rounded-2xl shadow-2xl w-full" loading="lazy" />
             </div>
           </div>
         </div>

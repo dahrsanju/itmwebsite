@@ -198,7 +198,7 @@ export default async function ServiceDetail({ params }) {
               </div>
               <div data-aos="fade-left" className="hidden lg:block">
                 <img
-                  src={service.gallery?.process || service.image}
+                  src={service.gallery?.strip || service.image}
                   alt={`${service.title} - Strategy`}
                   className="rounded-2xl shadow-2xl w-full h-[450px] object-cover"
                   loading="lazy"
@@ -221,26 +221,26 @@ export default async function ServiceDetail({ params }) {
           />
 
           {/* Process image banner */}
-          <div className="mb-12 rounded-2xl overflow-hidden shadow-xl" data-aos="fade-up">
-            <div className="grid grid-cols-3 h-64">
-              <img
-                src={service.gallery?.intro || service.image}
-                alt={`${service.title} process step 1`}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <img
-                src={service.gallery?.process || service.image}
-                alt={`${service.title} process step 2`}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-              <img
-                src={service.gallery?.benefits || service.image}
-                alt={`${service.title} process step 3`}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+          <div className="mb-12 relative rounded-2xl overflow-hidden shadow-xl h-64 md:h-72" data-aos="fade-up">
+            <img
+              src={service.gallery?.process || service.image}
+              alt={`${service.title} - Our Process`}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-dark/80" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="grid grid-cols-3 gap-6 md:gap-10 px-6 max-w-3xl w-full text-center">
+                {service.process.slice(0, 3).map((step, i) => (
+                  <div key={i} className="text-white">
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center mx-auto mb-3">
+                      <span className="font-heading font-extrabold text-xl md:text-2xl">{String(i + 1).padStart(2, '0')}</span>
+                    </div>
+                    <h4 className="font-heading font-bold text-sm md:text-base">{step.step}</h4>
+                    <p className="text-white/70 text-xs mt-1 hidden md:block">{step.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -269,14 +269,6 @@ export default async function ServiceDetail({ params }) {
       {/* BENEFITS - Image + list side by side */}
       {/* ============================================ */}
       <section className="section-padding bg-dark text-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={service.gallery?.benefits || service.image}
-            alt=""
-            className="w-full h-full object-cover opacity-10"
-          />
-          <div className="absolute inset-0 bg-dark/80" />
-        </div>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl -top-40 -right-40" />
           <div className="absolute w-[400px] h-[400px] bg-accent/5 rounded-full blur-3xl bottom-0 -left-40" />
@@ -326,32 +318,22 @@ export default async function ServiceDetail({ params }) {
       {service.technologies && (
         <section className="section-padding bg-white">
           <div className="container-custom">
-            <div className="grid lg:grid-cols-2 gap-14 items-center">
-              <div data-aos="fade-right">
-                <img
-                  src={service.gallery?.process || service.image}
-                  alt={`${service.title} - Technologies`}
-                  className="rounded-2xl shadow-xl w-full h-[350px] object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div data-aos="fade-left">
-                <span className="inline-block text-sm font-semibold uppercase tracking-widest text-primary mb-3">Tech Stack</span>
-                <h2 className="section-title">Technologies We Use</h2>
-                <p className="text-gray-600 mb-6">Industry-leading tools and platforms we leverage for maximum results.</p>
-                <div className="flex flex-wrap gap-3">
-                  {service.technologies.map((tech, i) => (
-                    <span
-                      key={tech}
-                      className="px-5 py-2.5 bg-gray-50 rounded-xl border border-gray-200 font-medium text-gray-700 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300 cursor-default"
-                      data-aos="zoom-in"
-                      data-aos-delay={i * 60}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            <SectionHeader
+              label="Tech Stack"
+              title="Technologies We Use"
+              subtitle="Industry-leading tools and platforms we leverage for maximum results."
+            />
+            <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
+              {service.technologies.map((tech, i) => (
+                <span
+                  key={tech}
+                  className="px-6 py-3 bg-gray-50 rounded-xl border border-gray-200 font-semibold text-gray-700 hover:border-primary hover:text-primary hover:bg-primary/5 hover:shadow-md transition-all duration-300 cursor-default text-sm"
+                  data-aos="zoom-in"
+                  data-aos-delay={i * 60}
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
         </section>

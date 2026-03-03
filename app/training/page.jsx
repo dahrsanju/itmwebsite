@@ -110,12 +110,25 @@ export default function Training() {
             subtitle="9 comprehensive modules covering everything from SEO basics to advanced live projects."
           />
 
-          {/* Image banner above modules */}
-          <div className="mb-12 rounded-2xl overflow-hidden shadow-xl" data-aos="fade-up">
-            <div className="grid grid-cols-3 h-56">
-              <img src="/images/training-classroom.jpg" alt="Training classroom" className="w-full h-full object-cover" loading="lazy" />
-              <img src="/images/training-students.jpg" alt="Students learning SEO" className="w-full h-full object-cover" loading="lazy" />
-              <img src="/images/training-workshop.jpg" alt="Hands-on workshop" className="w-full h-full object-cover" loading="lazy" />
+          {/* Curriculum highlight banner */}
+          <div className="mb-12 relative rounded-2xl overflow-hidden shadow-xl h-56 md:h-64" data-aos="fade-up">
+            <img src="/images/training-students.jpg" alt="Students learning SEO" className="w-full h-full object-cover" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/60 to-dark/80" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="grid grid-cols-3 gap-6 md:gap-10 px-6 max-w-3xl w-full text-center">
+                {[
+                  { num: '9', label: 'Modules' },
+                  { num: '50+', label: 'Hours of Training' },
+                  { num: '100%', label: 'Hands-on Projects' },
+                ].map((item, i) => (
+                  <div key={i} className="text-white">
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center mx-auto mb-3">
+                      <span className="font-heading font-extrabold text-xl md:text-2xl">{item.num}</span>
+                    </div>
+                    <p className="font-heading font-bold text-sm md:text-base">{item.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -142,10 +155,6 @@ export default function Training() {
 
       {/* Benefits - With side image */}
       <section className="section-padding bg-dark text-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="/images/training-workshop.jpg" alt="" className="w-full h-full object-cover opacity-10" />
-          <div className="absolute inset-0 bg-dark/80" />
-        </div>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl -top-40 -right-40" />
         </div>
@@ -188,12 +197,28 @@ export default function Training() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div data-aos="fade-right" className="order-2 lg:order-1">
-              <img
-                src="/images/training-students.jpg"
-                alt="Students placed in top companies"
-                className="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
-                loading="lazy"
-              />
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full h-[400px] bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center">
+                <div className="absolute inset-0 overflow-hidden">
+                  <div className="absolute w-64 h-64 bg-white/10 rounded-full blur-3xl -top-20 -right-20" />
+                  <div className="absolute w-48 h-48 bg-accent/10 rounded-full blur-3xl -bottom-10 -left-10" />
+                </div>
+                <div className="relative z-10 text-center text-white p-8">
+                  <div className="text-6xl font-heading font-extrabold mb-2">95%</div>
+                  <p className="text-xl font-semibold text-blue-100 mb-6">Placement Success Rate</p>
+                  <div className="grid grid-cols-3 gap-4">
+                    {[
+                      { num: '200+', label: 'Placed' },
+                      { num: '50+', label: 'Partners' },
+                      { num: '4.8', label: 'Rating' },
+                    ].map((s) => (
+                      <div key={s.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20">
+                        <div className="text-lg font-heading font-extrabold">{s.num}</div>
+                        <div className="text-xs text-blue-200">{s.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
             <div data-aos="fade-left" className="order-1 lg:order-2">
               <span className="inline-block text-sm font-semibold uppercase tracking-widest text-primary mb-3">Career Growth</span>
@@ -242,7 +267,7 @@ export default function Training() {
               {/* Image next to form info */}
               <div className="mb-8 rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="/images/training-classroom.jpg"
+                  src="/images/training-workshop.jpg"
                   alt="Join our SEO training program"
                   className="w-full h-56 object-cover"
                   loading="lazy"
