@@ -52,65 +52,71 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-[90vh] flex items-center overflow-hidden bg-dark">
+      {/* Hero Section - Full Cover SEO Image */}
+      <section ref={heroRef} className="relative min-h-[100vh] flex items-center overflow-hidden">
+        {/* Full-cover background image */}
         <div className="absolute inset-0">
-          <img src="/images/hero-bg.jpg" alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/90 to-dark/50" />
+          <img
+            src="/images/hero-seo-new.jpg"
+            alt="SEO Analytics Dashboard"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/70 to-dark/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-dark/30" />
         </div>
+        {/* Decorative glows */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-96 h-96 bg-primary/10 rounded-full blur-3xl -top-20 -left-20 animate-pulse" />
-          <div className="absolute w-96 h-96 bg-accent/10 rounded-full blur-3xl -bottom-20 -right-20 animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute w-96 h-96 bg-primary/15 rounded-full blur-3xl -top-20 -left-20 animate-pulse" />
+          <div className="absolute w-72 h-72 bg-accent/10 rounded-full blur-3xl bottom-10 right-10 animate-pulse" style={{ animationDelay: '1s' }} />
         </div>
         <div className="container-custom relative z-10 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="hero-subtitle inline-block px-4 py-1.5 bg-primary/20 text-accent text-sm font-semibold rounded-full mb-6 border border-primary/30">
-                Expert & Skilled Digital Agency
-              </span>
-              <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-6 leading-[1.1]">
-                A Place That Helps
-                <span className="gradient-text block mt-2">Growth of Your Business</span>
-              </h1>
-              <p className="hero-desc text-gray-300 text-lg mb-8 max-w-lg leading-relaxed">
-                We provide custom digital solutions for all our clients to achieve their business goals with a team of experts from all over the world.
-              </p>
-              <div className="hero-buttons flex flex-wrap gap-4">
-                <Link href="/contact" className="btn-primary text-base !py-3.5 !px-8">
-                  Get Started
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </Link>
-                <Link href="/services" className="btn-secondary text-base !py-3.5 !px-8">
-                  Our Services
-                </Link>
-              </div>
+          <div className="max-w-3xl">
+            <span className="hero-subtitle inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm text-accent text-sm font-semibold rounded-full mb-6 border border-white/20">
+              Expert & Skilled Digital Agency
+            </span>
+            <h1 className="hero-title text-4xl md:text-5xl lg:text-7xl font-heading font-extrabold text-white mb-6 leading-[1.1]">
+              A Place That Helps
+              <span className="gradient-text block mt-2">Growth of Your Business</span>
+            </h1>
+            <p className="hero-desc text-gray-200 text-lg md:text-xl mb-10 max-w-2xl leading-relaxed">
+              We provide custom digital solutions for all our clients to achieve their business goals with a team of experts from all over the world.
+            </p>
+            <div className="hero-buttons flex flex-wrap gap-4 mb-12">
+              <Link href="/contact" className="btn-primary text-base !py-4 !px-10">
+                Get Started
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </Link>
+              <Link href="/services" className="btn-secondary text-base !py-4 !px-10 !border-white/30 !text-white hover:!bg-white/10">
+                Our Services
+              </Link>
             </div>
-            <div className="hero-image hidden lg:block">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-br from-primary/30 to-accent/30 rounded-3xl blur-2xl transform rotate-2 animate-pulse" />
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary/40 to-accent/40 rounded-2xl" />
-                <img
-                  src="/images/hero-seo.jpg"
-                  alt="SEO Analytics Dashboard - Data-Driven Digital Marketing"
-                  className="relative w-full max-w-lg mx-auto rounded-2xl shadow-2xl shadow-primary/20"
-                />
-                <div className="absolute -bottom-4 -right-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3 flex items-center gap-3 shadow-xl">
-                  <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-                  </div>
-                  <div>
-                    <p className="text-white text-sm font-bold">+147%</p>
-                    <p className="text-gray-300 text-xs">Traffic Growth</p>
-                  </div>
+            {/* Floating stat badges */}
+            <div className="hero-image flex flex-wrap gap-4">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-5 py-3 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                 </div>
-                <div className="absolute -top-3 -left-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3 flex items-center gap-3 shadow-xl">
-                  <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-                    <svg className="w-5 h-5 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                  </div>
-                  <div>
-                    <p className="text-white text-sm font-bold">#1 Rank</p>
-                    <p className="text-gray-300 text-xs">Google SERP</p>
-                  </div>
+                <div>
+                  <p className="text-white text-sm font-bold">+147%</p>
+                  <p className="text-gray-300 text-xs">Traffic Growth</p>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-5 py-3 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
+                  <svg className="w-5 h-5 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </div>
+                <div>
+                  <p className="text-white text-sm font-bold">#1 Rank</p>
+                  <p className="text-gray-300 text-xs">Google SERP</p>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-5 py-3 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <div>
+                  <p className="text-white text-sm font-bold">500+</p>
+                  <p className="text-gray-300 text-xs">Projects Done</p>
                 </div>
               </div>
             </div>
