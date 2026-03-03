@@ -54,7 +54,7 @@ export default function Training() {
         <div className="container-custom relative z-10 pb-14 pt-32 text-center">
           <span className="inline-block text-sm font-semibold uppercase tracking-widest text-accent mb-4" data-aos="fade-down">Training &amp; Placement</span>
           <h1 className="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl text-white mb-5" data-aos="fade-up">
-            Best SEO Training Programs<br />
+            Best AI SEO Training Programs<br />
             <span className="gradient-text">in Hyderabad</span>
           </h1>
           <p className="text-gray-200 max-w-2xl mx-auto text-lg" data-aos="fade-up" data-aos-delay="100">

@@ -6,7 +6,7 @@ import { gsap } from 'gsap';
 import SectionHeader from '@/components/ui/SectionHeader';
 import CounterCard from '@/components/ui/CounterCard';
 import { services } from '@/data/services';
-import { companyInfo, testimonials, stats, portfolio } from '@/data/siteData';
+import { companyInfo, testimonials, stats } from '@/data/siteData';
 
 export default function Home() {
   const heroRef = useRef(null);
@@ -87,12 +87,31 @@ export default function Home() {
             </div>
             <div className="hero-image hidden lg:block">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl transform rotate-3" />
+                <div className="absolute -inset-4 bg-gradient-to-br from-primary/30 to-accent/30 rounded-3xl blur-2xl transform rotate-2 animate-pulse" />
+                <div className="absolute -inset-1 bg-gradient-to-br from-primary/40 to-accent/40 rounded-2xl" />
                 <img
-                  src="/heroimg11.png"
-                  alt="Digital Marketing Experts"
-                  className="relative w-full max-w-lg mx-auto drop-shadow-2xl"
+                  src="/images/hero-seo.jpg"
+                  alt="SEO Analytics Dashboard - Data-Driven Digital Marketing"
+                  className="relative w-full max-w-lg mx-auto rounded-2xl shadow-2xl shadow-primary/20"
                 />
+                <div className="absolute -bottom-4 -right-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3 flex items-center gap-3 shadow-xl">
+                  <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                  </div>
+                  <div>
+                    <p className="text-white text-sm font-bold">+147%</p>
+                    <p className="text-gray-300 text-xs">Traffic Growth</p>
+                  </div>
+                </div>
+                <div className="absolute -top-3 -left-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-3 flex items-center gap-3 shadow-xl">
+                  <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
+                    <svg className="w-5 h-5 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                  </div>
+                  <div>
+                    <p className="text-white text-sm font-bold">#1 Rank</p>
+                    <p className="text-gray-300 text-xs">Google SERP</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -107,7 +126,7 @@ export default function Home() {
               <div className="relative">
                 <img src="/images/about-team.jpg" alt="iTech Manthra Team" className="rounded-2xl shadow-2xl w-full" loading="lazy" />
                 <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-xl hidden md:block">
-                  <div className="text-3xl font-heading font-extrabold">10+</div>
+                  <div className="text-3xl font-heading font-extrabold">5+</div>
                   <div className="text-sm opacity-90">Years Experience</div>
                 </div>
               </div>
@@ -189,7 +208,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: '💡', title: 'Creative Approach', desc: 'Unique strategies tailored for each business to stand out in the competitive digital landscape.' },
-              { icon: '👥', title: 'Expert Team', desc: 'Well-recognized experts in their niche with 10+ years proven experience across industries.' },
+              { icon: '👥', title: 'Expert Team', desc: 'Well-recognized experts in their niche with proven experience across industries since 2021.' },
               { icon: '🔒', title: 'Transparency', desc: 'Complete transparency in our processes with regular reports and open communication.' },
               { icon: '🎯', title: 'Result Driven', desc: 'Focused on delivering measurable results that directly impact your business growth and ROI.' },
             ].map((item, i) => (
@@ -219,62 +238,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Portfolio Preview */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <SectionHeader
-            label="Our Work"
-            title="Featured Projects"
-            subtitle="Take a look at some of our recent projects that have delivered exceptional results for our clients."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {portfolio.slice(0, 6).map((project, i) => (
-              <div
-                key={project.name}
-                className="card group overflow-hidden"
-                data-aos="fade-up"
-                data-aos-delay={i * 80}
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-400">
-                    <span className="text-white font-semibold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View Project</span>
-                  </div>
-                </div>
-                <div className="p-5">
-                  <span className="text-xs font-semibold text-primary uppercase tracking-wider">{project.category}</span>
-                  <h3 className="font-heading font-bold text-lg mt-1 text-dark">{project.name}</h3>
-                  <p className="text-gray-500 text-sm mt-2 leading-relaxed">{project.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-10" data-aos="fade-up">
-            <Link href="/portfolio" className="btn-outline">
-              View All Projects
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Training CTA */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right">
               <span className="inline-block text-sm font-semibold uppercase tracking-widest text-primary mb-3">Training & Placement</span>
-              <h2 className="section-title">Best SEO Training Programs in Hyderabad</h2>
+              <h2 className="section-title">Best AI SEO Training Programs in Hyderabad</h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Are you looking to learn SEO? Our training courses are specially designed for beginners, business owners, students, or anyone curious about enhancing their skills and business website online presence.
               </p>
               <ul className="space-y-3 mb-8">
-                {['AI-Integrated SEO Training', 'Hands-on Live Projects', '9 Comprehensive Modules', 'Expert Faculty with 10+ Years Experience', 'Placement Assistance'].map((item) => (
+                {['AI-Integrated SEO Training', 'Hands-on Live Projects', '9 Comprehensive Modules', 'Expert Faculty with Industry Experience', 'Placement Assistance'].map((item) => (
                   <li key={item} className="flex items-center gap-3">
                     <svg className="w-5 h-5 text-primary shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                     <span className="text-gray-700 font-medium">{item}</span>

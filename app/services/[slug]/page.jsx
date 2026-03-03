@@ -128,7 +128,7 @@ export default async function ServiceDetail({ params }) {
                   loading="lazy"
                 />
                 <div className="absolute -bottom-5 -right-5 bg-primary text-white p-5 rounded-xl shadow-xl hidden md:block">
-                  <div className="text-2xl font-heading font-extrabold">10+</div>
+                  <div className="text-2xl font-heading font-extrabold">5+</div>
                   <div className="text-xs opacity-90">Years Experience</div>
                 </div>
               </div>

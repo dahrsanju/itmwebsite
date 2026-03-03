@@ -188,9 +188,9 @@ export default function Contact() {
                     <option value="ppc">PPC / Google Ads</option>
                     <option value="smm">Social Media Marketing</option>
                     <option value="web-design">Web Design</option>
-                    <option value="guest-posting">Guest Posting</option>
+                    <option value="digital-pr">Digital PR &amp; Editorial Content</option>
                     <option value="link-building">Link Building</option>
-                    <option value="domain-authority">Domain Authority</option>
+                    <option value="trust-signals">Trust Signal Optimization</option>
                     <option value="training">Training &amp; Placement</option>
                     <option value="other">Other</option>
                   </select>

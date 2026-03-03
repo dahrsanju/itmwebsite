@@ -16,14 +16,13 @@ const navLinks = [
       { path: '/services/ppc-services', label: 'PPC Services' },
       { path: '/services/social-media-management', label: 'Social Media' },
       { path: '/services/web-designing', label: 'Web Design' },
-      { path: '/services/guest-posting', label: 'Guest Posting' },
+      { path: '/services/guest-posting', label: 'Digital PR' },
       { path: '/services/link-building', label: 'Link Building' },
       { path: '/services/keyword-ranking', label: 'Keyword Ranking' },
-      { path: '/services/domain-authority', label: 'Domain Authority' },
+      { path: '/services/domain-authority', label: 'Trust Signals' },
     ],
   },
   { path: '/training', label: 'Training' },
-  { path: '/portfolio', label: 'Portfolio' },
   { path: '/contact', label: 'Contact' },
 ];
 

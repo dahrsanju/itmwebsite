@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { companyInfo, globalLocations } from '@/data/siteData';
+import { companyInfo } from '@/data/siteData';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -45,9 +45,7 @@ export default function Footer() {
                 { path: '/services/ppc-services', label: 'PPC Services' },
                 { path: '/services/social-media-management', label: 'Social Media' },
                 { path: '/services/web-designing', label: 'Web Design' },
-                { path: '/services/guest-posting', label: 'Guest Posting' },
                 { path: '/services/link-building', label: 'Link Building' },
-                { path: '/services/domain-authority', label: 'Domain Authority' },
               ].map((link) => (
                 <li key={link.path}>
                   <Link href={link.path} className="text-gray-400 text-sm hover:text-white hover:pl-1 transition-all duration-200">
@@ -66,8 +64,9 @@ export default function Footer() {
                 { path: '/', label: 'Home' },
                 { path: '/about', label: 'About Us' },
                 { path: '/training', label: 'Training & Placement' },
-                { path: '/portfolio', label: 'Portfolio' },
                 { path: '/contact', label: 'Contact Us' },
+                { path: '/terms', label: 'Terms & Conditions' },
+                { path: '/privacy', label: 'Privacy Policy' },
               ].map((link) => (
                 <li key={link.path}>
                   <Link href={link.path} className="text-gray-400 text-sm hover:text-white hover:pl-1 transition-all duration-200">
@@ -115,13 +114,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Global Locations */}
-        <div className="mt-12 pt-8 border-t border-white/10">
-          <h5 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Global Presence</h5>
-          <p className="text-gray-500 text-xs leading-relaxed">
-            {globalLocations.join(' • ')}
-          </p>
-        </div>
       </div>
 
       {/* Bottom Bar */}

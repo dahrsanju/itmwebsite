@@ -10,22 +10,22 @@ export default function About() {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
     name: 'About iTech Manthra',
-    description: 'Learn about iTech Manthra, a creative digital marketing agency with 10+ years of experience.',
+    description: 'Learn about iTech Manthra, a creative digital marketing agency delivering results since 2021.',
     mainEntity: {
       '@type': 'Organization',
       name: companyInfo.name,
-      foundingDate: '2014',
+      foundingDate: '2021',
       numberOfEmployees: '50+',
     },
   };
 
   const timeline = [
-    { year: '2014', title: 'Founded', desc: 'iTech Manthra was established with a vision to revolutionise digital marketing.' },
-    { year: '2016', title: 'Global Expansion', desc: 'Expanded services to international clients across 10+ countries.' },
-    { year: '2018', title: '100+ Clients', desc: 'Reached the milestone of serving over 100 satisfied clients worldwide.' },
-    { year: '2020', title: 'Training Division', desc: 'Launched SEO training programs to empower the next generation of marketers.' },
-    { year: '2022', title: 'AI Integration', desc: 'Integrated AI tools into our marketing strategies for enhanced results.' },
-    { year: '2024', title: '500+ Projects', desc: 'Delivered over 500 successful digital marketing projects globally.' },
+    { year: '2021', title: 'Founded', desc: 'iTech Manthra was established with a vision to revolutionise digital marketing.' },
+    { year: '2022', title: 'Global Expansion', desc: 'Expanded services to international clients across multiple countries.' },
+    { year: '2023', title: '50+ Clients', desc: 'Reached the milestone of serving over 50 satisfied clients worldwide.' },
+    { year: '2024', title: 'Training Division', desc: 'Launched SEO training programs to empower the next generation of marketers.' },
+    { year: '2025', title: 'AI Integration', desc: 'Integrated AI tools into our marketing strategies for enhanced results.' },
+    { year: '2026', title: '100+ Projects', desc: 'Delivered over 100 successful digital marketing projects globally.' },
   ];
 
   return (
@@ -63,7 +63,7 @@ export default function About() {
               <span className="inline-block text-sm font-semibold uppercase tracking-widest text-primary mb-3">Who We Are</span>
               <h2 className="section-title">A Team of Creative Professionals</h2>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                iTM is a team of creative digital marketing professionals from all over the world. Each one is well recognized as an expert in their niche and has proven experience in helping multinational businesses for 10+ years.
+                iTM is a team of creative digital marketing professionals from all over the world. Each one is well recognized as an expert in their niche and has proven experience in helping businesses grow digitally since 2021.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 To pace up with the emerging technology, there is a need for every individual business to conquer the digital space and mark their online visibility. We have customized our Digital Marketing Services to boost online presence through effective White Hat Link Building Techniques.

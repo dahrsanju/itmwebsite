@@ -81,7 +81,7 @@ export const globalLocations = [
 ];
 
 export const seoCourse = {
-  title: 'Best SEO Training Programs in Hyderabad',
+  title: 'Best AI SEO Training Programs in Hyderabad',
   intro: 'Are you new and looking to learn SEO? Our SEO training courses are specially for beginners, business owners, students, or anyone who is curious about enhancing their skills and business website online presence.',
   whatIsSeo: 'Search Engine Optimization refers to the process of enhancing a website\'s visibility and ranking in search engine results pages (SERPs). It involves strategies for improving organic traffic through content structure optimization, link building, and alignment with search engine algorithms.',
   features: 'SEO Training Integrated with AI Tools — Hands-on experience with live projects, staying current with latest search engine updates.',
