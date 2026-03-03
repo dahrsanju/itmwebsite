@@ -61,8 +61,8 @@ export default function Home() {
             alt="Digital Marketing Strategy Team - SEO & Analytics"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/75 to-dark/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-dark/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark/40 via-transparent to-transparent" />
         </div>
         {/* Decorative glows */}
         <div className="absolute inset-0 overflow-hidden">
