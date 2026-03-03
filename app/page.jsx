@@ -57,8 +57,8 @@ export default function Home() {
         {/* Full-cover background image */}
         <div className="absolute inset-0">
           <img
-            src="/images/hero-seo-new.jpg"
-            alt="SEO Analytics Dashboard"
+            src="/images/hero-digital-marketing.jpg"
+            alt="Digital Marketing Strategy Team - SEO & Analytics"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/70 to-dark/40" />
