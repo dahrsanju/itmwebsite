@@ -23,6 +23,7 @@ const navLinks = [
     ],
   },
   { path: '/training', label: 'Training' },
+  { path: 'http://www.itechmanthra.com/blog/', label: 'Blog', external: true },
   { path: '/contact', label: 'Contact' },
 ];
 
@@ -97,21 +98,32 @@ export default function Header() {
                 onMouseEnter={() => link.children && setActiveDropdown(link.path)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <Link
-                  href={link.path}
-                  className={`px-4 py-2 rounded-lg text-[0.92rem] font-medium transition-all duration-200 flex items-center gap-1 ${
-                    isActive(link.path) && (link.path === '/' ? pathname === '/' : true)
-                      ? 'text-primary bg-primary/5'
-                      : 'text-gray-700 hover:text-primary hover:bg-gray-50'
-                  }`}
-                >
-                  {link.label}
-                  {link.children && (
-                    <svg className={`w-4 h-4 transition-transform ${activeDropdown === link.path ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  )}
-                </Link>
+                {link.external ? (
+                  <a
+                    href={link.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-lg text-[0.92rem] font-medium transition-all duration-200 flex items-center gap-1 text-gray-700 hover:text-primary hover:bg-gray-50"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={link.path}
+                    className={`px-4 py-2 rounded-lg text-[0.92rem] font-medium transition-all duration-200 flex items-center gap-1 ${
+                      isActive(link.path) && (link.path === '/' ? pathname === '/' : true)
+                        ? 'text-primary bg-primary/5'
+                        : 'text-gray-700 hover:text-primary hover:bg-gray-50'
+                    }`}
+                  >
+                    {link.label}
+                    {link.children && (
+                      <svg className={`w-4 h-4 transition-transform ${activeDropdown === link.path ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    )}
+                  </Link>
+                )}
 
                 {/* Dropdown */}
                 {link.children && activeDropdown === link.path && (
@@ -189,16 +201,27 @@ export default function Header() {
                       )}
                     </>
                   ) : (
-                    <Link
-                      href={link.path}
-                      className={`block px-4 py-3 rounded-lg font-medium ${
-                        isActive(link.path) && (link.path === '/' ? pathname === '/' : true)
-                          ? 'text-primary bg-primary/5'
-                          : 'text-gray-700 hover:bg-gray-50'
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
+                    {link.external ? (
+                      <a
+                        href={link.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-4 py-3 rounded-lg font-medium text-gray-700 hover:bg-gray-50"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.path}
+                        className={`block px-4 py-3 rounded-lg font-medium ${
+                          isActive(link.path) && (link.path === '/' ? pathname === '/' : true)
+                            ? 'text-primary bg-primary/5'
+                            : 'text-gray-700 hover:bg-gray-50'
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   )}
                 </div>
               ))}
