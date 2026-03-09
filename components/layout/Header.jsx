@@ -200,8 +200,7 @@ export default function Header() {
                         </div>
                       )}
                     </>
-                  ) : (
-                    {link.external ? (
+                  ) : link.external ? (
                       <a
                         href={link.path}
                         target="_blank"
@@ -221,7 +220,6 @@ export default function Header() {
                       >
                         {link.label}
                       </Link>
-                    )}
                   )}
                 </div>
               ))}
