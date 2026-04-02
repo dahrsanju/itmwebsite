@@ -34,6 +34,10 @@ export const metadata = {
   icons: {
     icon: '/logo-4.png',
   },
+  // Tag verification - here you need to add the code
+  verification: {
+    google: "zdSzErh9KPCCfG_2v8Y6VkrCXSqWg_inrjvePiSIC4w"
+  }
 };
 
 export default function RootLayout({ children }) {
